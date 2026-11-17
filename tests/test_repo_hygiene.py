@@ -139,7 +139,8 @@ def test_readme_headline_is_t1_only(project_root: Path) -> None:
 
 @requires_git
 def test_demo_dir_holds_exactly_the_generated_files(project_root: Path) -> None:
-    """D62 (b): app/demo is tracked and holds the two files that demo-data regenerates."""
+    """D62 (b): app/demo is tracked and holds the two files that demo-data regenerates; bytes
+    on Windows, values within relative 1e-5 elsewhere (D66)."""
     if not _is_repo(project_root):
         pytest.skip("not a git repository")
     from niftytail import demo
@@ -150,7 +151,9 @@ def test_demo_dir_holds_exactly_the_generated_files(project_root: Path) -> None:
     cfg = load_config(project_root / "configs" / "base.toml")
     blobs = demo.documents(cfg, project_root / "configs" / "base.toml", 8)
     for name, blob in blobs.items():
-        assert (project_root / "app" / "demo" / name).read_bytes() == blob
+        assert demo.compare((project_root / "app" / "demo" / name).read_bytes(), blob) <= (
+            demo.REL_TOL
+        ), name
 
 
 def test_cloud_requirements_pinned_to_uv_lock(project_root: Path) -> None:

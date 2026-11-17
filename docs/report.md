@@ -1,6 +1,6 @@
 # Extreme downside risk in the Nifty 50: an out-of-sample comparison of EVT and GARCH-EVT forecasts
 
-**NIFTYTAIL report, draft (Day 14-4, D61 (h); corrected Day 15C, D65).** Claim policy D49 T6: the headline is T1 of `docs/results_review.md`, which holds in all three passes; every other result, including the main finding H on the price index, names its passes and is labelled *pass-dependent* (its verdict differs across the three test passes) and/or *borderline* (decided by a p-value in [0.01, 0.10]). Results are quoted or closely paraphrased from `docs/results_review.md` (owner-approved, D46 and D49), with that file as their source; table values are copied from the tracked JSON named under each table. No per-day value or date appears except the first and last training dates.
+**NIFTYTAIL report (Day 14-4, D61 (h); corrected Day 15C, D65).** Claim policy D49 T6: the headline is T1 of `docs/results_review.md`, which holds in all three passes; every other result, including the main finding H on the price index, names its passes and is labelled *pass-dependent* (its verdict differs across the three test passes) and/or *borderline* (decided by a p-value in [0.01, 0.10]). Results are quoted or closely paraphrased from `docs/results_review.md` (owner-approved, D46 and D49), with that file as their source; table values are copied from the tracked JSON named under each table. No per-day value or date appears except the first and last training dates.
 
 ## Abstract
 

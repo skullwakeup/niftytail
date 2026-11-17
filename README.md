@@ -68,7 +68,7 @@ One ordered path, from the download to the dashboard. Every command runs from th
 6. **Figures**: `tl-blocks`, then `figures` (tracked SVGs from tracked JSON only; D51, D54) and, locally only, `figures-local` (D53; gitignored). Their `--verify` took 1 s, 5 s and 2 s.
 7. **Dashboard**: see [Dashboard](#dashboard).
 
-The run directories, the SVGs and the forecast key all include the generating commit (D44 (b)). A run at a later commit therefore creates new, equally valid run directories. Verified in the development repository with the owner's data (byte-identical reruns; docs/reproducibility.md). From this public copy: the tests and `demo-data --verify`. Commit IDs recorded in manifests and docs refer to the development repository.
+The run directories, the SVGs and the forecast key all include the generating commit (D44 (b)). A run at a later commit therefore creates new, equally valid run directories. Verified in the development repository with the owner's data (byte-identical reruns; docs/reproducibility.md). From this public copy: the tests and `demo-data --verify` (byte-identical on Windows; on other systems the demo values agree within a relative 1e-5, D66). Commit IDs recorded in manifests and docs refer to the development repository.
 
 ## Using the model
 
@@ -152,7 +152,7 @@ Streamlit Community Cloud (only after the supervisor's approval, D23):
 1. On [share.streamlit.io](https://share.streamlit.io), create an app from the public repository: branch `main`, main file `app/dashboard.py`.
 2. Advanced settings: Python **3.13** (the project requires 3.13; the default is older), and in Secrets: `NIFTYTAIL_PUBLIC = "1"`.
 
-Cloud installs from `app/requirements.txt` (the entrypoint directory is read before the repository root): streamlit and pyarrow pinned to the `uv.lock` versions and the `niftytail` package itself. `uv.lock` and `pyproject.toml` are unchanged. With the secret set, the app is in public mode: no `data/`, `reports/runs/` or `reports/live/` access, and the Today section is the synthetic demo.
+Cloud installs from `app/requirements.txt` (the entrypoint directory is read before the repository root): streamlit and pyarrow pinned to the `uv.lock` versions and the `niftytail` package itself. With the secret set, the app is in public mode: no `data/`, `reports/runs/` or `reports/live/` access, and the Today section is the synthetic demo.
 
 ## Data policy
 
@@ -175,10 +175,10 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 
 - **Plan:** [`docs/plan_v2.2.md`](docs/plan_v2.2.md), the approved and frozen specification.
 - **Mathematics:** [`docs/methodology.md`](docs/methodology.md).
-- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D65), with who approved it and when.
+- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D66), with who approved it and when.
 - **Status:** [`docs/status.md`](docs/status.md): current state and the next recommended action.
 - **Evidence:** [`docs/literature.md`](docs/literature.md); data record [`docs/data.md`](docs/data.md).
-- **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (report draft), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).
+- **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (research report), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).
 - **Reproducibility:** [`docs/reproducibility.md`](docs/reproducibility.md) and [`docs/reproduce.md`](docs/reproduce.md).
 
 Development process and tooling are described in the internship report submitted to IDEAS – ISI Kolkata; that report is not part of this repository.

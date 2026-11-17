@@ -6,13 +6,15 @@ around the close, seeded from ``SeedSequence([runtime] seed)`` (child 62). It go
 the same code path as ``forecast`` (``live._targets`` -> ``rolling.forecast_target``,
 ``live._document`` with the health block, ``live.series_document``) and is written to the
 tracked ``app/demo/forecast.json`` and ``app/demo/series.json``, which the public dashboard
-shows as "Today (demo)". ``--verify`` regenerates both in memory and compares bytes.
+shows as "Today (demo)". ``--verify`` regenerates both in memory and compares bytes; off
+Windows, files that differ in bytes pass if their values agree within ``REL_TOL`` (D66).
 """
 
 from __future__ import annotations
 
-import logging
+import json
 import math
+import sys
 from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
@@ -24,7 +26,17 @@ from niftytail import backtest, live
 from niftytail import losses as ls
 from niftytail.config import Config, config_sha256
 
-__all__ = ["DEMO_DIR", "FILES", "SOURCE", "documents", "run", "synthetic_index"]
+__all__ = [
+    "DEMO_DIR",
+    "FILES",
+    "REL_TOL",
+    "SOURCE",
+    "compare",
+    "documents",
+    "max_rel_diff",
+    "run",
+    "synthetic_index",
+]
 
 DEMO_DIR = Path("app/demo")
 FILES = (live.FORECAST_JSON, live.SERIES_JSON)
@@ -36,6 +48,45 @@ SEED_CHILD = 62  # SeedSequence(seed).spawn(63)[62], as D62
 # s2 = omega + (alpha + gamma 1{e < 0}) e2 + beta s2 (falls raise the variance)
 MU, PHI, OMEGA, ALPHA, GAMMA, BETA, DF = 0.0004, 0.03, 2e-6, 0.03, 0.10, 0.90, 5
 START_LEVEL = 10_000.0
+# D66: byte identity holds on Windows (the development platform); elsewhere the GARCH-based
+# values differ by up to about 1e-6 relative, so floats are compared within REL_TOL
+BYTES_ONLY = sys.platform == "win32"
+REL_TOL = 1e-5
+ABS_FLOOR = 1e-12  # floor of the relative difference's denominator
+
+
+def max_rel_diff(a: Any, b: Any) -> float:
+    """Largest |x - y| / max(|x|, |y|, ABS_FLOOR) over the floats of two parsed JSON values;
+    ``inf`` if the structure or any non-float value differs (D66). A non-finite float matches
+    only the same infinity or nan against nan (never a nan result, which max() would hide)."""
+    if isinstance(a, float) and isinstance(b, float):
+        if not (math.isfinite(a) and math.isfinite(b)):
+            return 0.0 if a == b or (math.isnan(a) and math.isnan(b)) else math.inf
+        return abs(a - b) / max(abs(a), abs(b), ABS_FLOOR)
+    if type(a) is not type(b):
+        return math.inf
+    if isinstance(a, dict):
+        if a.keys() != b.keys():
+            return math.inf
+        return max((max_rel_diff(a[k], b[k]) for k in a), default=0.0)
+    if isinstance(a, list):
+        if len(a) != len(b):
+            return math.inf
+        return max(map(max_rel_diff, a, b), default=0.0)
+    return 0.0 if a == b else math.inf
+
+
+def compare(old: bytes, new: bytes) -> float:
+    """0.0 if the bytes are equal; on Windows ``inf`` otherwise; elsewhere the
+    ``max_rel_diff`` of the parsed JSON (``inf`` if either does not parse)."""
+    if old == new:
+        return 0.0
+    if BYTES_ONLY:
+        return math.inf
+    try:
+        return max_rel_diff(json.loads(old), json.loads(new))
+    except ValueError:
+        return math.inf
 
 
 def _dates(n: int) -> list[date]:
@@ -104,18 +155,30 @@ def documents(cfg: Config, config_path: Path, workers: int) -> dict[str, bytes]:
 def run(
     cfg: Config, config_path: str | Path, workers: int, verify: bool, root: str | Path, log: Any
 ) -> int:
-    """``demo-data`` (D62 (b)): write the two files, or with ``verify`` compare bytes."""
+    """``demo-data`` (D62 (b)): write the two files, or with ``verify`` compare them (D66)."""
     base = Path(root)
     blobs = documents(cfg, base / config_path, workers)
     out = base / DEMO_DIR
     if verify:
-        ok = all((out / n).is_file() and (out / n).read_bytes() == b for n, b in blobs.items())
-        log.log(
-            logging.INFO if ok else logging.ERROR,
-            "verify: bytes match" if ok else "verify: MISMATCH",
-            extra={"files": sorted(blobs)},
+        worst = max(
+            compare((out / n).read_bytes(), b) if (out / n).is_file() else math.inf
+            for n, b in blobs.items()
         )
-        return 0 if ok else 1
+        extra: dict[str, Any] = {"files": sorted(blobs)}
+        if worst == 0.0:
+            log.info("verify: bytes match", extra=extra)
+            return 0
+        if worst <= REL_TOL:
+            log.info(
+                "verify: values match within relative 1e-5 "
+                "(not byte-identical; docs/reproducibility.md)",
+                extra=extra,
+            )
+            return 0
+        if not BYTES_ONLY:
+            extra["max_rel_diff"] = repr(worst)
+        log.error("verify: MISMATCH", extra=extra)
+        return 1
     out.mkdir(parents=True, exist_ok=True)
     for n, b in blobs.items():
         (out / n).write_bytes(b)

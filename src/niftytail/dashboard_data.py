@@ -315,7 +315,9 @@ REPRODUCE = (
 )
 VERIFIED = (
     "Verified in the development repository with the owner's data (byte-identical reruns; "
-    "docs/reproducibility.md). From this public copy: the tests and `demo-data --verify`."
+    "docs/reproducibility.md). From this public copy: the tests and `demo-data --verify` "
+    "(byte-identical on Windows; on other systems the demo values agree within a relative "
+    "1e-5, D66)."
 )
 # D65 (b), (g): the cells of T1 decided by a p-value in [0.01, 0.10] (D49 T6); a test
 # rebuilds this line from the three backtest.json files and finds it in the README

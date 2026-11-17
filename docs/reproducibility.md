@@ -58,9 +58,11 @@ All 33 sha256 values in docs/protected_hashes.md (the frozen plan, the threshold
 
 ## Across machines
 
-Byte identity is established on this machine only. On another machine or operating system, last-bit floating-point differences are possible (BLAS, libm and CPU instruction paths differ), and a single last-bit difference changes a sha256. To compare a rerun made elsewhere, compare `forecasts.csv`:
+Byte identity is established on Windows (the development platform) only (D66). On another operating system, floating-point differences are possible (BLAS, libm and CPU instruction paths differ), and a single last-bit difference changes a sha256. To compare a rerun made elsewhere, compare `forecasts.csv` (for the demo, the two files under `app/demo/`):
 
-- VaR and ES columns: relative tolerance 1e-9;
-- flags columns, breach counts and every test verdict (Kupiec, Christoffersen IND and CC, ES residual, traffic-light zones, Diebold-Mariano rejections): exact equality.
+- VaR, ES, mu and sigma: relative tolerance 1e-5 (D66; it was 1e-9, which the Linux run below disproved);
+- counts, flags columns, breach counts and every test verdict (Kupiec, Christoffersen IND and CC, ES residual, traffic-light zones, Diebold-Mariano rejections): exact equality.
 
-No second machine was tested.
+Off Windows, `demo-data --verify` and the demo test of `tests/test_repo_hygiene.py` apply this rule: bytes first; if they differ, the parsed JSON must have the same structure and the same non-float values, and every float must agree within relative 1e-5 (absolute floor 1e-12). The command then prints "verify: values match within relative 1e-5 (not byte-identical; docs/reproducibility.md)" and exits 0; otherwise it prints MISMATCH with the maximum relative difference and exits 1.
+
+Second machine, as reported by the reviewer: Linux, Python 3.13.18, the same `uv.lock`, a fresh clone of the public repository at `644621b`, before D66. One test failed, `tests/test_repo_hygiene.py::test_demo_dir_holds_exactly_the_generated_files`, and `demo-data configs/base.toml --verify` printed MISMATCH for `forecast.json` and `series.json`. Regenerated against tracked: `forecast.json`, 46 values differ, maximum relative difference 1.24e-6 (GARCH-based values, e.g. `models.fhs.es.0.95`); `series.json`, 836 values differ, maximum 1.34e-7. All other 1,060 tests, mypy, ruff, the 23 app tests and `reference_values.py` passed. Both differences are within the D66 tolerance.
