@@ -183,6 +183,10 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 
 Development process and tooling are described in the internship report submitted to IDEAS – ISI Kolkata; that report is not part of this repository.
 
+## Team
+
+Shreya Bhatta, Sambit Sinha and Raktim Chakraborty (Heritage Institute of Technology), internship project at IDEAS – ISI Kolkata (Autumn 2026). Mentor: Mr. Diptendu Dutta.
+
 ## Disclaimer
 
 This is research code, not investment advice. The project is not affiliated with or endorsed by NSE or NSE Indices Limited. NIFTY 50 is a trademark of NSE Indices Limited. The MIT licence covers the code, not index data, which is not included in this repository.
