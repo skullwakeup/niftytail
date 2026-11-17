@@ -3,7 +3,8 @@
 **Updated:** 2026-11-17.
 
 ## Current state
-- Last commit before this one: `405d7b6` "Day 15C-4: squashed publication (D65)"; this commit is "15C-5: README points to the internship report".
+- Last commit before this one: `e71cdfd` "15C-5: README points to the internship report"; this commit is "15C-6: post-release fixes".
+- **Day 15C-6 (2026-11-17; display and wording only, owner-approved, no new decision; every tracked JSON unchanged).** `app/dashboard.py`: under the Proof heading "Commits", the caption "Commit IDs refer to the development repository; the public copy is published as one commit per release (D65 (n))." in both modes; in demo mode the replay heading ends in "(synthetic index)", as the other demo titles (local mode unchanged). `dashboard_data.py`: tooltip dates of the market chart (line and candles), the worst-days triangles and the drawdown chart come from a new string field `date_t` (the stored ISO date, unchanged text), because the temporal x field "date" was shown as epoch milliseconds; the recent-losses chart (ordinal x) is unchanged; the date is not formatted by the chart library, so no time-zone shift. `README.md`: "(D1-D65)". Tests: `tests/test_dashboard_data.py` (no tooltip field is a temporal channel of the same layer, every spec, both palettes, every range; the tooltip date equals the ISO string), `app/tests/test_app.py` (the Proof caption in both modes; the demo-only replay heading). A temporary update mirror of this commit on top of the public repository (clean clone, outside the repository; deleted afterwards): 9 of 9 scans pass.
 - **Day 15C-5 (2026-11-17; wording only, owner-approved, no new decision).** `README.md`: the line on the development process and tooling now says it is described in the internship report submitted to IDEAS – ISI Kolkata, which is not part of this repository. A temporary squash mirror of this commit (clean clone, outside the repository; deleted afterwards): 9 of 9 scans pass and the new README line is unchanged by the wording rules.
 - **Day 15C-4 (2026-11-16).** D65 (n): the public copy is one commit per release; commit IDs recorded in manifests and docs refer to the development repository.
 - **Day 15C-3 (2026-11-16; docs).** D65 pins (14)-(15). `docs/decisions.md`: the Roles note under the header. `README.md`: the line on the development process and tooling.
@@ -87,7 +88,7 @@
 - ENV-1 (D43): the project `.venv` contains the default and dev groups only.
 
 ## Next recommended action
-Owner: publish (squash) -> send review file to reviewer -> push -> deploy at niftytail.streamlit.app
+Released 2026-11-17: public repository https://github.com/skullwakeup/niftytail and app https://niftytail.streamlit.app. No open task.
 - W = 2000 is not run on TRI (D46 (e): insufficient history), a recorded limitation of D2.
 
 ## Day 11T: what was done (2026-11-15; no code change)

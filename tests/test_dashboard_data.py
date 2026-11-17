@@ -917,6 +917,38 @@ def test_specs_marks_tooltips_and_colours(mode: str) -> None:
     )
 
 
+@pytest.mark.parametrize("mode", ["dark", "light"])
+def test_no_tooltip_field_is_temporal(mode: str) -> None:
+    # 15C-6: a tooltip field that is also a temporal channel shows epoch milliseconds
+    doc, ser = synthetic_forecast(), synthetic_series()
+    specs = _all_specs(mode)
+    specs |= {f"M1 {r} linear": dd.market_spec(doc, ser, r, False, mode) for r in dd.RANGES}
+    for name, spec in specs.items():
+        for layer in _layers(spec):
+            enc = layer["encoding"]
+            temporal = {
+                v["field"]
+                for ch, v in enc.items()
+                if ch != "tooltip" and isinstance(v, dict) and v.get("type") == "temporal"
+            }
+            if enc.get("x", {}).get("type") == "temporal" and "x2" in enc:
+                temporal.add(enc["x2"]["field"])  # x2 takes the type of x
+            tips = {t["field"] for t in enc["tooltip"]}
+            assert not tips & temporal, (name, tips & temporal)
+
+
+def test_tooltip_date_is_the_iso_string() -> None:
+    doc, ser = synthetic_forecast(), synthetic_series()
+    isos = {h["date"] for h in ser["history"]}
+    for spec in (dd.market_spec(doc, ser, "4Y", True, "dark"), dd.drawdown_spec(ser, "4Y", "dark")):
+        for layer in _layers(spec):
+            dates = [t["field"] for t in layer["encoding"]["tooltip"] if t["title"] == "Date"]
+            for row in layer["data"]["values"] if dates else []:
+                assert row[dates[0]] == row["date"] and row["date"] in isos
+    rows = dd.market_spec(doc, ser, "4Y", True, "dark")["layer"][0]["data"]["values"]
+    assert rows[-1]["date_t"] == ser["history"][-1]["date"]
+
+
 def test_market_spec_window_outside_the_range() -> None:
     doc, ser = synthetic_forecast(), synthetic_series()
     ser["window"] = {"first": "1990-01-01", "last": "1990-02-01"}

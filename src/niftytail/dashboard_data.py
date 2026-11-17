@@ -241,6 +241,11 @@ DEMO_BANNER = (
 )
 DEMO_SECTION = "Today (demo)"
 DEMO_TITLE = "synthetic index"
+REPLAY_HEADING = "Replay: the worst days of the series, if they happened tomorrow"
+COMMITS_NOTE = (
+    "Commit IDs refer to the development repository; the public copy is published as one "
+    "commit per release (D65 (n))."
+)
 Y_PAD = 0.03  # M1 y domain: ~3% padding around the visible data
 MAX_PERIOD = 100_000  # return periods above this many trading days are capped
 CAPPED = "rarer than 1 in 100,000 trading days (beyond the reliable range)"
@@ -1223,6 +1228,7 @@ def market_spec(
     rows = [
         {
             "date": r["date"],
+            "date_t": r["date"],  # tooltip text: "date" itself is parsed as temporal
             "open": r["open"],
             "high": r["high"],
             "low": r["low"],
@@ -1263,7 +1269,7 @@ def market_spec(
         "domain": y_domain(visible, log_scale),
     }
     tip = _tip(
-        ("date", "Date"),
+        ("date_t", "Date"),
         *((("open_t", "Open"), ("high_t", "High"), ("low_t", "Low")) if candles else ()),
         ("close_t", "Close"),
         ("change_t", "Change vs previous close"),
@@ -1322,7 +1328,7 @@ def market_spec(
         )
     close = {r["date"]: r["close"] for r in rows}
     worst = [
-        {"date": w["date"], "close": close[w["date"]], "fall": pct(w["loss"])}
+        {"date": w["date"], "date_t": w["date"], "close": close[w["date"]], "fall": pct(w["loss"])}
         for w in ser["worst"]
         if w["date"] in close
     ]
@@ -1335,7 +1341,7 @@ def market_spec(
                     "x": _no_axis(x),
                     "y": {"field": "close", "type": "quantitative", "scale": y, "axis": None},
                     "color": {"datum": "Worst days", **col},
-                    "tooltip": _tip(("date", "Date"), ("fall", "Fall")),
+                    "tooltip": _tip(("date_t", "Date"), ("fall", "Fall")),
                 },
             }
         )
@@ -1363,7 +1369,12 @@ def drawdown_spec(
     """M2: the drawdown from the running peak, same x range as M1, a red area at 10%."""
     p, mk = PALETTE[mode], market(ser, rng)
     rows = [
-        {"date": r["date"], "dd": 100 * r["drawdown"], "dd_t": _signed(r["drawdown"])}
+        {
+            "date": r["date"],
+            "date_t": r["date"],
+            "dd": 100 * r["drawdown"],
+            "dd_t": _signed(r["drawdown"]),
+        }
         for r in mk["rows"]
     ]
     x: dict[str, Any] = {"field": "date", "type": "temporal", "title": None}
@@ -1375,7 +1386,7 @@ def drawdown_spec(
         "encoding": {
             "x": x,
             "y": {"field": "dd", "type": "quantitative", "title": "Drawdown (%)"},
-            "tooltip": _tip(("date", "Date"), ("dd_t", "Drawdown")),
+            "tooltip": _tip(("date_t", "Date"), ("dd_t", "Drawdown")),
         },
     }
     return _spec(mode, [layer], title, height=140)

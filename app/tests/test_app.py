@@ -370,3 +370,22 @@ def test_public_mode_from_secrets(monkeypatch: pytest.MonkeyPatch, tmp_path: Pat
 def test_local_mode_never_shows_the_demo(monkeypatch: pytest.MonkeyPatch, no_live: Path) -> None:
     at = _run(monkeypatch, public=False)
     assert dd.DEMO_SECTION not in _labels(at) and dd.DEMO_BANNER not in _text(at)
+
+
+# --- 15C-6: post-release fixes -----------------------------------------------------------------
+@pytest.mark.parametrize("public", [True, False])
+def test_proof_commits_caption(monkeypatch: pytest.MonkeyPatch, public: bool) -> None:
+    at = _run(monkeypatch, public=public)
+    assert not at.exception
+    assert dd.COMMITS_NOTE in [c.value for c in at.caption]
+
+
+def _replay(at: AppTest) -> list[str]:
+    return [m.value for m in at.markdown if m.value.startswith(f"**{dd.REPLAY_HEADING}")]
+
+
+def test_replay_heading_demo_only(monkeypatch: pytest.MonkeyPatch, live_fixture: Path) -> None:
+    demo = _run(monkeypatch, public=True)
+    assert _replay(demo) == [f"**{dd.REPLAY_HEADING} ({dd.DEMO_TITLE})**"]
+    local = _run(monkeypatch, public=False)
+    assert _replay(local) == [f"**{dd.REPLAY_HEADING}**"]

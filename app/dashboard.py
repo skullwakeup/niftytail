@@ -256,7 +256,9 @@ def today(bundle: dict[str, object] | None, demo: bool = False) -> None:
     k = st.slider("Volatility shock k (times today's sigma)", 1.0, 3.0, 1.0, 0.25)
     st.table(dd.stress_rows(doc, k, position))
     st.caption(dd.STRESS_NOTE)
-    st.markdown("**Replay: the worst days of the series, if they happened tomorrow**")
+    st.markdown(
+        f"**{dd.REPLAY_HEADING} ({dd.DEMO_TITLE})**" if demo else f"**{dd.REPLAY_HEADING}**"
+    )
     st.table(dd.replay_rows(doc, ser, position))
     st.caption(dd.REPLAY_NOTE)
 
@@ -405,6 +407,7 @@ def how_it_works(bundle: dict[str, object] | None) -> None:
 def proof(bundle: dict[str, object] | None) -> None:
     p = provenance()
     st.subheader("Commits")
+    st.caption(dd.COMMITS_NOTE)
     st.table([{"artefact": k, "commit": v} for k, v in p["commits"].items()])
     st.subheader("Inputs (sha256 checked against the protected-hash list)")
     st.code("\n".join(f"{v}  {k}" for k, v in p["inputs"].items()), language=None)

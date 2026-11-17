@@ -175,7 +175,7 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 
 - **Plan:** [`docs/plan_v2.2.md`](docs/plan_v2.2.md), the approved and frozen specification.
 - **Mathematics:** [`docs/methodology.md`](docs/methodology.md).
-- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D64), with who approved it and when.
+- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D65), with who approved it and when.
 - **Status:** [`docs/status.md`](docs/status.md): current state and the next recommended action.
 - **Evidence:** [`docs/literature.md`](docs/literature.md); data record [`docs/data.md`](docs/data.md).
 - **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (report draft), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).
