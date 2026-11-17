@@ -1,0 +1,142 @@
+# NIFTYTAIL base configuration: pre-registered constants of the approved V2.2 plan.
+#
+# Source of truth: docs/plan_v2.2.md (A0-A6 supersede V2.1), docs/decisions.md (D1-D22).
+# Rules:
+#   * Probabilities, confidence levels, quantile levels and tolerances are STRINGS so that
+#     config.py parses them exactly with fractions.Fraction (A0: never derive tail counts
+#     from floats).
+#   * Keys marked "set on Day N" are deliberately absent until that gate. Their absence is
+#     valid and means "not yet decided".
+#   * Changing any value after its gate requires a new dated entry in docs/decisions.md.
+
+spec_version = "V2.2"
+
+[data]                                 # D1, D2, D23. Paths are repo-relative; all gitignored.
+series = "PR"                          # "PR" (primary) or "TRI" (sensitivity run only)
+field = "Close"
+start_date = "1995-11-03"              # official base date; earlier values excluded
+raw_dir = "data/raw"                   # owner-downloaded, unedited CSV files (D23)
+manifest = "data/raw/MANIFEST.toml"    # file names, sizes, sha256, rows, date ranges
+validation_dir = "data/validation"     # validate outputs (report, flags, spot-check sheet)
+
+[validation]                           # D25: thresholds affect REPORTING only, never the data
+large_return_flag = "0.05"             # flag |ln(P_t / P_{t-1})| >= this (exact Fraction)
+gap_flag_days = 5                      # flag >= this many calendar days between trading dates
+stale_run_min = 3                      # flag runs of >= this many identical consecutive closes
+spot_check_n = 10                      # dates drawn for the owner's manual spot check
+
+[design]                               # D3; V2.1 2.2
+train_size = 2000                      # T0: training returns used for threshold selection
+window = 1000                          # W: rolling estimation window
+horizon = 1                            # one-day-ahead forecasts only
+sensitivity_windows = [2000]
+
+[levels]                               # D6; A0 (c = confidence level, p = 1 - c)
+primary = ["0.95", "0.99"]
+descriptive = ["0.995", "0.999"]
+
+[threshold]                            # D4a-D4d, D5; V2.1 3
+grid = [
+  "0.80", "0.81", "0.82", "0.83", "0.84", "0.85", "0.86", "0.87",
+  "0.88", "0.89", "0.90", "0.91", "0.92", "0.93", "0.94", "0.95",
+]
+forwardstop_alpha = "0.10"             # D4b
+gof_bootstrap_reps = 999               # D22: finite-replication limitation documented
+stable_region_points = 4               # [q, q + 0.03]
+stable_region_width = "0.03"
+tol_xi = "0.10"                        # D4c
+tol_var99_rel = "0.05"
+tol_es99_rel = "0.10"
+split_half_flag = "0.03"               # Step 5: |q_half - q*| > 0.03 -> flag to owner
+sensitivity_offsets = ["-0.02", "0.02", "0.03"]
+xi_zero_tol = "1e-8"                   # xi = 0 limit branch below this |xi|
+n_min = 100                            # D33 override: D32 rule failed (n_min = null); q_max = 0.90
+q_selected = "0.88"                    # D37
+
+[nmin_study]                           # D4d; V2.1 3 Step 0
+xi_true = ["0.1", "0.25", "0.4"]
+beta = "1"
+n_u = [50, 75, 100, 150]
+replications = 2000
+min_convergence = "0.99"
+max_rmse_xi = "0.15"
+max_rel_rmse_var99 = "0.15"
+var_level = "0.99"                     # D32: VaR99 excess quantile, p = 1 - var_level exactly
+override_decision = "D33"              # optional: decision adopting [threshold] n_min after a rule failure
+
+[simstudy]                             # D13; A3
+sample_size = 2000
+window_refit = 1000
+replications = 200
+replications_fallback = 100            # used only if the Day-6 pilot projects > 2 h
+max_runtime_hours = 2
+gof_bootstrap_reps = 199
+s1_q0 = ["0.85", "0.90"]
+s1_xi = ["0.10", "0.25", "0.40"]
+s2_t_df = 4
+s3_q0 = "0.90"
+s3_xi = "0.25"
+s3_armax_a = ["0.3", "0.6"]
+s4_garch_a1 = "0.08"
+s4_garch_b1 = "0.90"
+s4_t_df = 6
+s4_burn_in = 1000
+s4_reference_size = 10000000
+trigger_false_selection = "0.20"
+trigger_fdr_multiple = "2"
+trigger_rule_failure = "0.10"
+
+[dependence]                           # D29; methodology 9 (Day-4 diagnostics on training data)
+acf_max_lag = 20                       # ACF lags 1..20 (biased, mean-removed)
+ljung_box_lags = [10, 20]              # Q(m), df = m
+arch_lm_lags = [5, 10]                 # Engle ARCH-LM, df = q
+exceedance_levels = ["0.80", "0.90", "0.95"]  # threshold-grid members; u = L_(ceil(n q))
+acf_band_z = "1.96"                    # descriptive band +-z / sqrt(n) (i.i.d. null)
+output_dir = "reports/eda"             # eda_summary.json tracked; figures/ gitignored
+
+[gpd]                                  # D30; methodology 6 (MLE over (xi, ln beta), PWM start)
+optimizer = "Nelder-Mead"              # the only allowed value
+xatol = "1e-10"                        # scipy Nelder-Mead options; strings, float only at use
+fatol = "1e-12"
+maxiter = 5000
+maxfev = 10000
+ci_level = "0.95"                      # D31: profile and delta-method CI level
+profile_xtol = "1e-10"                 # brentq xtol for the profile-CI bounds
+profile_xi_max = "10"                  # no upper crossing by here -> EstimationError
+xi_boundary_tol = "1e-6"               # MLE with xi <= -1 + tol -> EstimationError
+delta_step_xi = "1e-5"                 # central-difference step in xi
+delta_step_beta_rel = "1e-6"           # central-difference step in beta, relative
+
+[garch]                                # D38: GARCH(1,1) Gaussian QMLE, Nelder-Mead on transformed parameters
+xatol = "1e-8"                         # scipy Nelder-Mead options; strings, float only at use
+fatol = "1e-10"
+maxiter = 5000
+maxfev = 10000
+simplex_step = "0.1"                   # initial simplex: start and start + step in each coordinate
+
+[conditional]                          # D39: GARCH-EVT residual threshold level, fixed by design
+q_c = "0.88"                           # D39 (a): equal to q_selected; not data-selected
+filter = "F4"                          # D40 (b): the D39 BIC winner (filter_selection.json)
+
+[backtest]                             # D8, D14, D15, D17, D19, D20; A2, A4, A5
+kupiec_level = "0.05"
+christoffersen_mc_reps = 9999          # D20: IND simulated at p_hat, CC at p0
+es_residual_bootstrap_reps = 9999      # D14
+es_residual_min_breaches = 20
+traffic_light_level = "0.99"           # D17
+traffic_light_block = 250
+traffic_light_green_max = 4
+traffic_light_yellow_max = 9
+dm_lag_rule = "newey_west_4_T100_2_9"  # D15: floor(4 (T/100)^(2/9))
+dm_lag_sensitivity_multiplier = 2
+common_mask_min_share = "0.99"         # A2: flag if |C| / total < 0.99
+
+[bootstrap]                            # D16; A5c
+block_rule = "ceil_cube_root"          # b = ceil(n^(1/3))
+replications = 1999
+sensitivity_multipliers = ["0.5", "2"]
+circular = false
+
+[runtime]                              # A5e
+seed = 20261111
+blas_threads = 1

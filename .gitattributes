@@ -1,0 +1,7 @@
+# Keep LF line endings in the working tree on every platform: preserves the approved
+# sha256 of docs/plan_v2.2.md and byte-identical artifacts (A5e).
+* text=auto eol=lf
+# Windows batch files need CRLF for cmd.exe label parsing (D59 (e)).
+*.cmd text eol=crlf
+# Font files and their OFL licences stay byte-identical to the official releases (D59 pin (24)).
+app/static/fonts/* -text

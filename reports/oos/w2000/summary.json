@@ -1,0 +1,55 @@
+{
+  "first_target": 2000,
+  "flag_counts": {
+    "fhs": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "garch_evt": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "garch_evt@0.86": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "garch_evt@0.9": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "garch_evt@0.91": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "garch_n": {
+      "near_boundary": 1257,
+      "no_pre_window_lag": 1
+    },
+    "gaussian": {},
+    "hs": {},
+    "pot_gpd": {},
+    "pot_gpd@0.86": {},
+    "pot_gpd@0.9": {},
+    "pot_gpd@0.91": {}
+  },
+  "garch_error": 0,
+  "garch_error_share": 0.0,
+  "missing_var": {
+    "fhs": 1,
+    "garch_evt": 1,
+    "garch_evt@0.86": 1,
+    "garch_evt@0.9": 1,
+    "garch_evt@0.91": 1,
+    "garch_n": 1,
+    "gaussian": 0,
+    "hs": 0,
+    "pot_gpd": 0,
+    "pot_gpd@0.86": 0,
+    "pot_gpd@0.9": 0,
+    "pot_gpd@0.91": 0
+  },
+  "n_targets": 5716,
+  "no_pre_window_lag": 1,
+  "stop_for_owner": false,
+  "window": 2000
+}

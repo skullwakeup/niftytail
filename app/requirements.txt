@@ -1,0 +1,8 @@
+# Streamlit Community Cloud, public app only (D62 (e)). Cloud reads the entrypoint directory
+# (app/) before the repository root, so this file is used instead of the root uv.lock, whose
+# default group does not contain streamlit. Versions pinned to uv.lock. Python 3.13.
+streamlit==1.67.0
+pyarrow==24.0.0
+# the niftytail package (the app imports niftytail.dashboard_data); resolved from the
+# repository root, where Cloud installs
+-e .

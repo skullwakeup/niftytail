@@ -1,0 +1,43 @@
+# Dashboard theme (D59 (r), amends D55 (f)): a Binance-inspired dark system, not the brand.
+# Dark only: with both [theme.light] and [theme.dark] Streamlit 1.67 starts in the viewer's OS
+# preference, so a first-time viewer would not always see dark (D59 pin (23)). Fonts are served
+# from app/static/fonts (OFL licences beside them); no CDN, the app renders offline.
+[theme]
+base = "dark"
+backgroundColor = "#0b0e11"
+secondaryBackgroundColor = "#1e2329"
+borderColor = "#2b3139"
+textColor = "#eaecef"
+primaryColor = "#fcd535"
+linkColor = "#fcd535"
+font = "Inter, sans-serif"
+codeFont = "IBM Plex Mono, monospace"
+baseRadius = "8px"
+showWidgetBorder = true
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/InterVariable.woff2"
+weight = "100 900"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "IBM Plex Mono"
+url = "app/static/fonts/IBMPlexMono-Regular.woff2"
+weight = "400"
+style = "normal"
+
+[server]
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+
+# D59 pin (44): Streamlit 1.67 shows a welcome popup in local runs unless
+# server.headless or logger.hideWelcomeMessage is true; this hides it (the browser still opens;
+# the app is at http://localhost:8501, the URL lines are no longer printed).
+[logger]
+hideWelcomeMessage = true
+
+[client]
+toolbarMode = "viewer"

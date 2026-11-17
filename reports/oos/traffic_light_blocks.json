@@ -1,0 +1,5871 @@
+{
+  "block_size": 250,
+  "decision": "D51",
+  "label": "Basel traffic light by 250-day block (plan A4; descriptive); block index only, no dates",
+  "level": "0.99",
+  "passes": {
+    "pr_w1000": {
+      "keys": {
+        "fhs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_n": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 8,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 5,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 10,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 12,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 13,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 21,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 5,
+            "n_obs": 216
+          }
+        },
+        "gaussian": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 3,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 23,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 18,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 7,
+            "n_obs": 216
+          }
+        },
+        "hs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 16,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 3,
+            "n_obs": 216
+          }
+        }
+      },
+      "label": "PR W1000 (primary)",
+      "run_commit": "04572a36048b57fe710d87268025369f4b4bf741",
+      "run_dir": "e65780dc4f81b1cad5a3bdd88b0fd18bb69f9ba3585655814af338174c0b28c9",
+      "run_manifest_sha256": "b487db40ce09b5ae5a46a1894d3320873d391e11397963ba3871ad35bae14b25",
+      "window": 1000
+    },
+    "pr_w2000": {
+      "keys": {
+        "fhs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "garch_evt": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "garch_n": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 4,
+              "inadmissible_rows": 1,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 8,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 5,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 21,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "gaussian": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 8,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 24,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 18,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "hs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 16,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 1,
+            "n_obs": 216
+          }
+        }
+      },
+      "label": "PR W2000",
+      "run_commit": "04572a36048b57fe710d87268025369f4b4bf741",
+      "run_dir": "dadebddafa917125bf0bc47e4b986a1e1bc029de87d690bc0a5ab3093e1270a7",
+      "run_manifest_sha256": "b487db40ce09b5ae5a46a1894d3320873d391e11397963ba3871ad35bae14b25",
+      "window": 2000
+    },
+    "tri_w1000": {
+      "keys": {
+        "fhs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_evt@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 3,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "garch_n": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 8,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 7,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 5,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 6,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 10,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 12,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 13,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 18,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 21,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "gaussian": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 11,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 3,
+              "breaches": 9,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 4,
+              "breaches": 23,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 18,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 7,
+            "n_obs": 216
+          }
+        },
+        "hs": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 13,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 4,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.86": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 2,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.9": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 3,
+            "n_obs": 216
+          }
+        },
+        "pot_gpd@0.91": {
+          "blocks": [
+            {
+              "block": 0,
+              "breaches": 5,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 1,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 2,
+              "breaches": 6,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "yellow"
+            },
+            {
+              "block": 3,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 4,
+              "breaches": 12,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 5,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 6,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 7,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 8,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 9,
+              "breaches": 4,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 10,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 11,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 12,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 13,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 14,
+              "breaches": 3,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 15,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 16,
+              "breaches": 15,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "red"
+            },
+            {
+              "block": 17,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 18,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 19,
+              "breaches": 0,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 20,
+              "breaches": 2,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            },
+            {
+              "block": 21,
+              "breaches": 1,
+              "inadmissible_rows": 0,
+              "n_obs": 250,
+              "zone": "green"
+            }
+          ],
+          "partial_block": {
+            "breaches": 3,
+            "n_obs": 216
+          }
+        }
+      },
+      "label": "TRI W1000",
+      "run_commit": "4c68343872f483bff2f5f0e88ddc6fdeb084fc95",
+      "run_dir": "316df0ba02cc927721383ee4c7f7e768af8d3bfa6d4a6041421f5b82ac35c67d",
+      "run_manifest_sha256": "1d811a1e0cb7c75af2fa872f865d41be732b744b4e645c72476b96dbfe6165d7",
+      "window": 1000
+    }
+  },
+  "provenance": {
+    "commit": "65697f44e3cb5b192e960bdfe309ea4fd9c83434",
+    "config_sha256": "2c9ae3799741765bded7ee8c85868d8faf1e103a515a83fbf36ff203448192c0"
+  }
+}

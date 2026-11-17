@@ -1,0 +1,94 @@
+{
+  "blas": {
+    "build_dependencies": {
+      "blas": {
+        "detection method": "pkgconfig",
+        "found": true,
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-_ivn3drs/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-_ivn3drs/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "name": "scipy-openblas",
+        "openblas configuration": "OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas",
+        "version": "0.3.34.106.0"
+      },
+      "lapack": {
+        "detection method": "pkgconfig",
+        "found": true,
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-_ivn3drs/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-_ivn3drs/cp313-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "name": "scipy-openblas",
+        "openblas configuration": "OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas",
+        "version": "0.3.34.106.0"
+      }
+    },
+    "numpy_version": "2.5.4",
+    "thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "config": {
+    "file": "configs/base.toml",
+    "sha256": "2c9ae3799741765bded7ee8c85868d8faf1e103a515a83fbf36ff203448192c0"
+  },
+  "data_manifest": {
+    "file": "data/raw/MANIFEST.toml",
+    "sha256": "87dca720be73fd81ddc8a76598bcf9d8533a8daddc2d1a7d57978585f78e0c04"
+  },
+  "git": {
+    "commit": "4c68343872f483bff2f5f0e88ddc6fdeb084fc95",
+    "dirty": false
+  },
+  "packages": {
+    "colorama": "0.4.6",
+    "contourpy": "1.4.0",
+    "coverage": "7.17.2",
+    "cycler": "0.12.1",
+    "fonttools": "4.68.0",
+    "iniconfig": "2.3.1",
+    "kiwisolver": "1.5.1",
+    "librt": "0.16.0",
+    "matplotlib": "3.11.2",
+    "mypy": "1.20.2",
+    "mypy-extensions": "1.2.0",
+    "niftytail": "0.1.0",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "pandas": "2.3.3",
+    "pandas-stubs": "2.3.3.260113",
+    "pathspec": "1.1.1",
+    "patsy": "1.0.3",
+    "pillow": "13.0.0",
+    "pluggy": "1.7.0",
+    "pygments": "2.21.0",
+    "pyparsing": "3.3.3",
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "python-dateutil": "4.0.0",
+    "pytz": "2026.6",
+    "ruff": "0.17.4",
+    "scipy": "1.18.1",
+    "statsmodels": "0.14.6",
+    "types-pytz": "2026.6.0.20261031",
+    "typing-extensions": "4.16.0",
+    "tzdata": "2026.6"
+  },
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "schema_version": 1,
+  "tri": {
+    "pr_manifest_sha256": "87dca720be73fd81ddc8a76598bcf9d8533a8daddc2d1a7d57978585f78e0c04",
+    "t0_tri": 1091,
+    "train_size_override": 1091,
+    "tri_manifest_sha256": "74c3babf553b88ed320a6208c997efea47e894f28439f318164ea7ca132e5490"
+  },
+  "tri_manifest": {
+    "file": "data/raw_tri/MANIFEST.toml",
+    "sha256": "74c3babf553b88ed320a6208c997efea47e894f28439f318164ea7ca132e5490"
+  }
+}
