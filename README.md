@@ -28,6 +28,12 @@ On TRI W1000, garch_evt is rejected by the 0.99 ES residual test (p 0.0438). On 
 
 Live demo: https://niftytail.streamlit.app. The public app shows the published track record, the methods and the provenance; its "Today (demo)" section runs the same forecast code on a **synthetic** index (`demo-data`, D62), never the Nifty 50.
 
+## How it was built
+
+NIFTYTAIL was built with AI tools under strict guardrails: a frozen research plan, a numbered decision log recording who approved each decision, tests on every commit and pinned result hashes. [docs/ai_usage.pdf](docs/ai_usage.pdf) is the full record: the tools, the workflow, the iterations, the mistakes the AI made and how they were caught, and a step-by-step reproduction guide.
+
+A note on the history: the first public release (17 November 2026) kept the published files tool-neutral, using role names such as "the implementer", and documented the AI use in the internship report submitted to IDEAS – ISI Kolkata, which this README pointed to. On 24 November the mentor asked for a detailed public record of how AI was used, as a project deliverable, and it was added here. Files from the first release keep their tool-neutral wording; the document names the tools.
+
 ## Quick start
 
 Requirements:
@@ -154,6 +160,26 @@ Streamlit Community Cloud (only after the supervisor's approval, D23):
 
 Cloud installs from `app/requirements.txt` (the entrypoint directory is read before the repository root): streamlit and pyarrow pinned to the `uv.lock` versions and the `niftytail` package itself. With the secret set, the app is in public mode: no `data/`, `reports/runs/` or `reports/live/` access, and the Today section is the synthetic demo.
 
+## Windows app
+
+The Windows app (D69) runs the dashboard in public mode (the synthetic demo; no `data/`, `reports/runs/` or `reports/live/`), the same as the public app, at http://localhost:8501.
+
+1. **Installer:** run `NIFTYTAIL-setup.exe`. It installs into `%LOCALAPPDATA%\Programs\NIFTYTAIL` without administrator rights, adds a Start-menu shortcut (and, if ticked, a Desktop shortcut) and can launch the app at the end. Uninstalling (Settings, Apps) removes the app together with the packages it downloaded.
+2. **Zip:** unzip `NIFTYTAIL-windows.zip` into a user-writable folder (for example on the Desktop, not in Program Files) and double-click `NIFTYTAIL.cmd` in the `NIFTYTAIL-windows` folder. Delete the folder to remove everything.
+
+- The first run needs internet (about 300 MB) and takes a few minutes: `uv.exe` (uv 0.12.15) installs the dependencies pinned in `uv.lock`, using an installed Python 3.13 or downloading one. Everything stays inside the install folder. Later runs start quickly; the browser opens when the app is ready.
+- The installer was tested on one second Windows machine (2026-11-24, D70; Smart App Control off, Python 3.13 installed): it installed without administrator rights, the first run installed the packages and opened the browser by itself, a later run started in a few seconds, and uninstalling removed the install folder and the Desktop shortcut. A machine without Python (uv then downloads one) is not tested.
+- Smart App Control: the installer was tested on the development PC with Smart App Control on (it installed and ran, D72) and on the second PC with it off (D70). Other PCs with Smart App Control on are untested.
+- No code signing. Windows SmartScreen may warn: click "More info", then "Run anyway".
+
+Build (owner, from the repository root, on a clean tree; `dist/` is gitignored, binaries are never committed). Download the official uv 0.12.15 release (https://github.com/astral-sh/uv/releases/download/0.12.15/uv-x86_64-pc-windows-msvc.zip; sha256 in D68), then:
+
+```powershell
+uv run --locked python scripts/build_windows.py --uv-zip <path to uv-x86_64-pc-windows-msvc.zip>
+```
+
+It writes `dist\NIFTYTAIL-windows\` and `dist\NIFTYTAIL-windows.zip`: `NIFTYTAIL.cmd`, `uv.exe` and `app\`, a `git archive` of HEAD with only the files the public dashboard reads (no tests, no publish tooling). If Inno Setup 6 is installed (`winget install --id JRSoftware.InnoSetup -e`), it also compiles `packaging/niftytail.iss` into `dist\NIFTYTAIL-setup.exe`; otherwise it says that the installer step was skipped.
+
 ## Data policy
 
 No market data is stored in Git (decision D12). `data/` and `reports/runs/` are gitignored, and `tests/test_repo_hygiene.py` enforces this. Data acquisition is governed by decision **D23** (`docs/decisions.md`): the owner downloads manually for local use; no market data or derived daily series is ever committed or redistributed. Publishing the code is subject to D23's pre-publication checklist.
@@ -166,7 +192,8 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 | `tests/` | pytest suite (synthetic data only, D23) |
 | `app/` | the Streamlit dashboard (`dashboard.py`), its tests and the local fonts |
 | `configs/base.toml` | every pre-registered constant |
-| `scripts/` | `update.cmd` (daily update), `timing_pilot.py` |
+| `scripts/` | `update.cmd` (daily update), `timing_pilot.py`, `build_windows.py` (the Windows app, D69) |
+| `packaging/` | `NIFTYTAIL.cmd` and `launch.py`, the launcher and entrypoint of the Windows app (D69) |
 | `reports/` | tracked aggregates: threshold evidence, OOS backtests (`reports/oos/`), figures (`reports/figures/`); `reports/runs/` and `reports/live/` are gitignored |
 | `docs/` | plan, methodology, data record, decisions, status, results review, report and the generated result docs |
 | `data/` | the owner's downloads and fetched rows (gitignored; never committed) |
@@ -175,13 +202,11 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 
 - **Plan:** [`docs/plan_v2.2.md`](docs/plan_v2.2.md), the approved and frozen specification.
 - **Mathematics:** [`docs/methodology.md`](docs/methodology.md).
-- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D66), with who approved it and when.
+- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D72), with who approved it and when.
 - **Status:** [`docs/status.md`](docs/status.md): current state and the next recommended action.
 - **Evidence:** [`docs/literature.md`](docs/literature.md); data record [`docs/data.md`](docs/data.md).
 - **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (research report), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).
 - **Reproducibility:** [`docs/reproducibility.md`](docs/reproducibility.md) and [`docs/reproduce.md`](docs/reproduce.md).
-
-Development process and tooling are described in the internship report submitted to IDEAS – ISI Kolkata; that report is not part of this repository.
 
 ## Team
 
