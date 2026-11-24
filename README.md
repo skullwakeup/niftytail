@@ -164,13 +164,29 @@ Cloud installs from `app/requirements.txt` (the entrypoint directory is read bef
 
 The Windows app (D69) runs the dashboard in public mode (the synthetic demo; no `data/`, `reports/runs/` or `reports/live/`), the same as the public app, at http://localhost:8501.
 
-1. **Installer:** run `NIFTYTAIL-setup.exe`. It installs into `%LOCALAPPDATA%\Programs\NIFTYTAIL` without administrator rights, adds a Start-menu shortcut (and, if ticked, a Desktop shortcut) and can launch the app at the end. Uninstalling (Settings, Apps) removes the app together with the packages it downloaded.
+1. **Installer:** run `NIFTYTAIL-setup.exe`. It installs into `%LOCALAPPDATA%\Programs\NIFTYTAIL` without administrator rights, adds a Start-menu shortcut (and, if ticked, a Desktop shortcut) and can launch the app at the end. Uninstalling (Settings, Apps) removes the app together with the packages it downloaded. Where Smart App Control is on, Windows may block the uninstaller (unins000.exe is not signed). Close the app window, then remove the app by hand in PowerShell:
+
+   ```powershell
+   Remove-Item -Recurse -Force "$env:LOCALAPPDATA\Programs\NIFTYTAIL"
+   Remove-Item -Recurse -Force "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\NIFTYTAIL*" -ErrorAction SilentlyContinue
+   Remove-Item -Force "$env:USERPROFILE\Desktop\NIFTYTAIL.lnk" -ErrorAction SilentlyContinue
+   Remove-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\NIFTYTAIL_is1"
+   ```
+
 2. **Zip:** unzip `NIFTYTAIL-windows.zip` into a user-writable folder (for example on the Desktop, not in Program Files) and double-click `NIFTYTAIL.cmd` in the `NIFTYTAIL-windows` folder. Delete the folder to remove everything.
 
 - The first run needs internet (about 300 MB) and takes a few minutes: `uv.exe` (uv 0.12.15) installs the dependencies pinned in `uv.lock`, using an installed Python 3.13 or downloading one. Everything stays inside the install folder. Later runs start quickly; the browser opens when the app is ready.
 - The installer was tested on one second Windows machine (2026-11-24, D70; Smart App Control off, Python 3.13 installed): it installed without administrator rights, the first run installed the packages and opened the browser by itself, a later run started in a few seconds, and uninstalling removed the install folder and the Desktop shortcut. A machine without Python (uv then downloads one) is not tested.
 - Smart App Control: the installer was tested on the development PC with Smart App Control on (it installed and ran, D72) and on the second PC with it off (D70). Other PCs with Smart App Control on are untested.
 - No code signing. Windows SmartScreen may warn: click "More info", then "Run anyway".
+
+### Why Windows warns, and how to check the file
+
+The installer and its uninstaller are not code-signed, so SmartScreen and Smart App Control may warn about them or block them. Everything inside is built from this repository: `packaging/`, `scripts/build_windows.py` and `uv.lock`. The tested installer is `NIFTYTAIL-setup.exe` with sha256 `93d1ba64b8984e201316a317c5c3ad855e27e6c22f22970f03359941a44fa443` (D70). To check a download, compare its hash with that value:
+
+```powershell
+Get-FileHash <path to>\NIFTYTAIL-setup.exe
+```
 
 Build (owner, from the repository root, on a clean tree; `dist/` is gitignored, binaries are never committed). Download the official uv 0.12.15 release (https://github.com/astral-sh/uv/releases/download/0.12.15/uv-x86_64-pc-windows-msvc.zip; sha256 in D68), then:
 
@@ -202,7 +218,7 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 
 - **Plan:** [`docs/plan_v2.2.md`](docs/plan_v2.2.md), the approved and frozen specification.
 - **Mathematics:** [`docs/methodology.md`](docs/methodology.md).
-- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D72), with who approved it and when.
+- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D73), with who approved it and when.
 - **Status:** [`docs/status.md`](docs/status.md): current state and the next recommended action.
 - **Evidence:** [`docs/literature.md`](docs/literature.md); data record [`docs/data.md`](docs/data.md).
 - **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (research report), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).

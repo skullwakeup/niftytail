@@ -3,7 +3,8 @@
 **Updated:** 2026-11-17.
 
 ## Current state
-- Last commit before this one: `d8d55a2` "17B: garbled rewrites fixed; Smart App Control record corrected; docs-only gate (D72)"; this commit is "17C: How it was built (README)".
+- Last commit before this one: `d1e8156` "17C: How it was built (README)"; this commit is "17D: uninstall under Smart App Control; installer check (D73)".
+- **Day 17D (2026-11-24; D73, owner-approved; docs only, no code, every tracked JSON, figure and protected file unchanged; docs-only gate, D72 (d)).** README "Windows app": where Smart App Control blocks the unsigned uninstaller, four PowerShell commands remove the app by hand; a subsection "Why Windows warns, and how to check the file" (not code-signed; built from packaging/, scripts/build_windows.py and uv.lock; the tested installer's sha256 from D70; Get-FileHash). README "(D1-D73)". A new update mirror is built and checked in a fresh clone; it is not pushed.
 - **Day 17C (2026-11-24; owner-approved wording only, no new decision; no code, every tracked JSON, figure and protected file unchanged; docs-only gate, D72 (d)).** README: a section "How it was built" after "Live demo" (the guardrails, the link to docs/ai_usage.pdf and a note on the tool-neutral first release); the duplicate link line under "Where decisions and status live" is removed. A new update mirror is built and checked in a fresh clone; it is not pushed.
 - **Day 17B (2026-11-24; D72, owner-approved; docs and publication rules only, no code, every tracked JSON, figure and protected file unchanged).** Three rewrite rules fix the seven places of the 17A mirror that read wrongly (D69, D70, the Day 16B-4 entry, the launcher docstring). Correction: the installer installs and runs on the development PC with Smart App Control on (the PyCrucible exe had been blocked there); README "Windows app" says so, and that other PCs with it on are untested. Docs-only gate (D72 (d)) from the next commit. docs/ai_usage.pdf refreshed; the allow entry for it loses one alternative. README "(D1-D72)". A new update mirror on top of the public repository is built and checked in a fresh clone; it is not pushed.
 - **Day 17A (2026-11-24; D71, owner-approved; docs and publication rules only, no code, every tracked JSON, figure and protected file unchanged).** docs/ai_usage.pdf (the owner's AI-usage document, sha256 in D71) is tracked and published unchanged; scripts/publish_rules.toml gains one allow entry for that path only. README: "(D1-D71)" and the line pointing to docs/ai_usage.pdf. An update mirror on top of the public repository is built and checked in a fresh clone; it is not pushed (results reported to the owner).
@@ -101,7 +102,7 @@
 - ENV-1 (D43): the project `.venv` contains the default and dev groups only.
 
 ## Next recommended action
-Released 2026-11-17: public repository https://github.com/skullwakeup/niftytail and app https://niftytail.streamlit.app. 17C: the owner reviews the update mirror (Niftytail-public5, review file niftytail-review5.txt; Niftytail-public3 and -public4 are superseded and not pushed) and pushes it to the public repository; then the Windows build runs from a public clone (D68 (c)).
+Released 2026-11-17: public repository https://github.com/skullwakeup/niftytail and app https://niftytail.streamlit.app. 17D: the public main is a6d9842 (the 17C mirror); the owner reviews the update mirror Niftytail-public6 (review file niftytail-review6.txt) and pushes it to the public repository; then the Windows build runs from a public clone (D68 (c)).
 - W = 2000 is not run on TRI (D46 (e): insufficient history), a recorded limitation of D2.
 
 ## Day 11T: what was done (2026-11-15; no code change)
