@@ -38,7 +38,7 @@ All under `dist\` (gitignored; binaries are never committed):
 
 The build ends by printing the installer's sha256 and the build time (80 s on the development PC for the D74 build, with the wheels already in the uv cache).
 
-The installer and its uninstaller are not code-signed. Where Smart App Control is on, Windows may block them, online and offline (seen on the development PC, D74). On such PCs use the zip: extract it and double-click `NIFTYTAIL.cmd`, which starts the bundled `python.exe`, signed by the Python Software Foundation. Code signing (for example through the SignPath Foundation, free for open-source projects) is not done.
+The installer and its uninstaller are not code-signed. Where Smart App Control is on, Windows may block them, online and offline (seen on the development PC, D74). On such PCs use the zip, in three steps: check its hash with `Get-FileHash`; before extracting, unblock it (right-click, Properties, tick Unblock, OK; or `Unblock-File .\NIFTYTAIL-windows.zip`); then extract it and double-click `NIFTYTAIL.cmd`, which starts the bundled `python.exe`, signed by the Python Software Foundation. A downloaded zip carries the Mark of the Web, and extracting it marks every file, so Smart App Control blocks `NIFTYTAIL.cmd`; Unblock tells Windows that the user trusts this download, which is why the hash check comes first. Tested with Smart App Control on, online and offline (D74). Unblock is not a general way around Smart App Control. Code signing (for example through the SignPath Foundation, free for open-source projects) is not done.
 
 ## What the build does
 
