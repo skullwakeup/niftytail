@@ -162,9 +162,9 @@ Cloud installs from `app/requirements.txt` (the entrypoint directory is read bef
 
 ## Windows app
 
-The Windows app (D69) runs the dashboard in public mode (the synthetic demo; no `data/`, `reports/runs/` or `reports/live/`), the same as the public app, at http://localhost:8501.
+The Windows app (D69, D74) runs the dashboard in public mode (the synthetic demo; no `data/`, `reports/runs/` or `reports/live/`), the same as the public app, at http://localhost:8501. It works offline: everything it needs is in the installer, it downloads nothing, and it listens on this PC only (localhost).
 
-1. **Installer:** run `NIFTYTAIL-setup.exe`. It installs into `%LOCALAPPDATA%\Programs\NIFTYTAIL` without administrator rights, adds a Start-menu shortcut (and, if ticked, a Desktop shortcut) and can launch the app at the end. Uninstalling (Settings, Apps) removes the app together with the packages it downloaded. Where Smart App Control is on, Windows may block the uninstaller (unins000.exe is not signed). Close the app window, then remove the app by hand in PowerShell:
+1. **Installer:** run `NIFTYTAIL-setup.exe`. It installs into `%LOCALAPPDATA%\Programs\NIFTYTAIL` without administrator rights, adds a Start-menu shortcut (and, if ticked, a Desktop shortcut) and can launch the app at the end. Installing over the earlier 0.1.0 app replaces it. Uninstalling (Settings, Apps) removes the app. The installer and its uninstaller are not code-signed: where Smart App Control is on, Windows may block them, online and offline. On such PCs use the zip (2). If the uninstaller is blocked, close the app window, then remove the app by hand in PowerShell:
 
    ```powershell
    Remove-Item -Recurse -Force "$env:LOCALAPPDATA\Programs\NIFTYTAIL"
@@ -173,28 +173,24 @@ The Windows app (D69) runs the dashboard in public mode (the synthetic demo; no 
    Remove-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\NIFTYTAIL_is1"
    ```
 
-2. **Zip:** unzip `NIFTYTAIL-windows.zip` into a user-writable folder (for example on the Desktop, not in Program Files) and double-click `NIFTYTAIL.cmd` in the `NIFTYTAIL-windows` folder. Delete the folder to remove everything.
+2. **Zip:** unzip `NIFTYTAIL-windows.zip` into a user-writable folder (for example on the Desktop, not in Program Files) and double-click `NIFTYTAIL.cmd` in the `NIFTYTAIL-windows` folder. It starts the bundled Python, whose `python.exe` is signed by the Python Software Foundation; this is the route for PCs where Smart App Control is on (tested on the development PC with Smart App Control on, online). Delete the folder to remove it.
 
-- The first run needs internet (about 300 MB) and takes a few minutes: `uv.exe` (uv 0.12.15) installs the dependencies pinned in `uv.lock`, using an installed Python 3.13 or downloading one. Everything stays inside the install folder. Later runs start quickly; the browser opens when the app is ready.
-- The installer was tested on one second Windows machine (2026-11-24, D70; Smart App Control off, Python 3.13 installed): it installed without administrator rights, the first run installed the packages and opened the browser by itself, a later run started in a few seconds, and uninstalling removed the install folder and the Desktop shortcut. A machine without Python (uv then downloads one) is not tested.
-- Smart App Control: the installer was tested on the development PC with Smart App Control on (it installed and ran, D72) and on the second PC with it off (D70). Other PCs with Smart App Control on are untested.
-- No code signing. Windows SmartScreen may warn: click "More info", then "Run anyway".
+What is inside: `NIFTYTAIL.cmd`, the launcher; `python\`, the official CPython 3.13.16 embeddable package from python.org with the dashboard's packages, installed from the Windows wheels pinned with their hashes in `uv.lock`; and `app\`, the files of this repository that the public dashboard reads. The launcher runs `python\python.exe` in isolated mode, so a Python, PYTHONPATH or user packages already on the PC are not used. A separate Visual C++ runtime should not be needed: the Python package brings `vcruntime140.dll` and `vcruntime140_1.dll`, and numpy, pandas and pyarrow carry their own `msvcp140.dll` (in `numpy.libs`, `pandas.libs` and `pyarrow.libs`). This is the result of checking the bundled DLLs; it is not tested on a PC without the runtime.
+
+- Tested offline (2026-11-25, D74; Wi-Fi off, no cable). Development PC (Windows 11 26H2, Smart App Control on, the 0.1.0 app removed before): the installer ran without a warning, the browser opened the app in about 4-5 s, a restart from the Start menu worked, and the app was removed with the PowerShell commands above. Later Smart App Control blocked the same installer on that PC, online and then offline; the zip ran there with Smart App Control on (online; offline not tested). Second laptop (Smart App Control off, Python 3.13 installed, so not a clean PC): 1.2.0 installed over 0.1.0 (uv.exe removed, Settings shows 1.2.0), the app opened in about 10-15 s with all four sections working, and the Settings uninstaller removed the install folder. Not tested: a PC that has never had Python or the Visual C++ runtime.
+- The earlier 0.1.0 installer, which downloaded its packages on the first run, was tested in D70 and D72.
+- No code signing. Windows SmartScreen may warn: click "More info", then "Run anyway". Signing (for example through the SignPath Foundation, free for open-source projects) is a possible later step; it is not done.
 
 ### Why Windows warns, and how to check the file
 
-The installer and its uninstaller are not code-signed, so SmartScreen and Smart App Control may warn about them or block them. Everything inside is built from this repository: `packaging/`, `scripts/build_windows.py` and `uv.lock`. The tested installer is `NIFTYTAIL-setup.exe` with sha256 `93d1ba64b8984e201316a317c5c3ad855e27e6c22f22970f03359941a44fa443` (D70). To check a download, compare its hash with that value:
+The installer and its uninstaller are not code-signed, so SmartScreen may warn about them, and where Smart App Control is on, Windows may block them, online and offline; on such PCs use the zip. Everything inside is built from this repository (`packaging/`, `scripts/build_windows.py` and `uv.lock`) and the Python package from python.org, whose `python.exe` is signed by the Python Software Foundation. The tested files are `NIFTYTAIL-setup.exe` with sha256 `dff3fef20722749c676b362ea605265b0a9c04aa710d7c977747a6b7706c547c` and `NIFTYTAIL-windows.zip` with sha256 `08ea4054edb8ac9ee52cde73aaf1cd569afd70f0d4410fbd7247ee19ac187524` (D74). To check a download, compare its hash with these values:
 
 ```powershell
 Get-FileHash <path to>\NIFTYTAIL-setup.exe
+Get-FileHash <path to>\NIFTYTAIL-windows.zip
 ```
 
-Build (owner, from the repository root, on a clean tree; `dist/` is gitignored, binaries are never committed). Download the official uv 0.12.15 release (https://github.com/astral-sh/uv/releases/download/0.12.15/uv-x86_64-pc-windows-msvc.zip; sha256 in D68), then:
-
-```powershell
-uv run --locked python scripts/build_windows.py --uv-zip <path to uv-x86_64-pc-windows-msvc.zip>
-```
-
-It writes `dist\NIFTYTAIL-windows\` and `dist\NIFTYTAIL-windows.zip`: `NIFTYTAIL.cmd`, `uv.exe` and `app\`, a `git archive` of HEAD with only the files the public dashboard reads (no tests, no publish tooling). If Inno Setup 6 is installed (`winget install --id JRSoftware.InnoSetup -e`), it also compiles `packaging/niftytail.iss` into `dist\NIFTYTAIL-setup.exe`; otherwise it says that the installer step was skipped.
+To build the installer yourself, see [docs/build_installer.md](docs/build_installer.md): requirements, the build command, what the build does, the offline check and troubleshooting.
 
 ## Data policy
 
@@ -208,17 +204,17 @@ No market data is stored in Git (decision D12). `data/` and `reports/runs/` are 
 | `tests/` | pytest suite (synthetic data only, D23) |
 | `app/` | the Streamlit dashboard (`dashboard.py`), its tests and the local fonts |
 | `configs/base.toml` | every pre-registered constant |
-| `scripts/` | `update.cmd` (daily update), `timing_pilot.py`, `build_windows.py` (the Windows app, D69) |
-| `packaging/` | `NIFTYTAIL.cmd` and `launch.py`, the launcher and entrypoint of the Windows app (D69) |
+| `scripts/` | `update.cmd` (daily update), `timing_pilot.py`, `build_windows.py` (the offline Windows app, D69, D74) |
+| `packaging/` | `NIFTYTAIL.cmd`, `launch.py` and `niftytail.iss`: the launcher, entrypoint and installer script of the Windows app (D69, D74) |
 | `reports/` | tracked aggregates: threshold evidence, OOS backtests (`reports/oos/`), figures (`reports/figures/`); `reports/runs/` and `reports/live/` are gitignored |
-| `docs/` | plan, methodology, data record, decisions, status, results review, report and the generated result docs |
+| `docs/` | plan, methodology, data record, decisions, status, results review, report, the generated result docs and the installer build guide (`build_installer.md`) |
 | `data/` | the owner's downloads and fetched rows (gitignored; never committed) |
 
 ## Where decisions and status live
 
 - **Plan:** [`docs/plan_v2.2.md`](docs/plan_v2.2.md), the approved and frozen specification.
 - **Mathematics:** [`docs/methodology.md`](docs/methodology.md).
-- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D73), with who approved it and when.
+- **Decisions:** [`docs/decisions.md`](docs/decisions.md), one row per decision (D1-D74), with who approved it and when.
 - **Status:** [`docs/status.md`](docs/status.md): current state and the next recommended action.
 - **Evidence:** [`docs/literature.md`](docs/literature.md); data record [`docs/data.md`](docs/data.md).
 - **Results:** [`docs/results_review.md`](docs/results_review.md) (owner-approved interpretation, D46, D49), [`docs/report.md`](docs/report.md) (research report), generated tables [`docs/oos.md`](docs/oos.md), [`docs/oos_tri.md`](docs/oos_tri.md), [`docs/oos_blocks.md`](docs/oos_blocks.md), [`docs/xi_path.md`](docs/xi_path.md) and [`docs/figures.md`](docs/figures.md).

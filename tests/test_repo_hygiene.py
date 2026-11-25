@@ -102,6 +102,14 @@ def test_python_pinned_to_313(project_root: Path) -> None:
     assert (project_root / ".python-version").read_text(encoding="utf-8").strip() == "3.13"
 
 
+def test_version_matches_pyproject(project_root: Path) -> None:
+    """D74: pyproject.toml is the one source of the version; the package and the installer agree."""
+    import niftytail
+
+    pyproject = tomllib.loads((project_root / "pyproject.toml").read_text(encoding="utf-8"))
+    assert niftytail.__version__ == pyproject["project"]["version"]
+
+
 def test_running_interpreter_is_313() -> None:
     import sys
 

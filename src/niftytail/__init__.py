@@ -3,4 +3,4 @@
 Specification: docs/plan_v2.2.md and docs/methodology.md.
 """
 
-__version__ = "0.1.0"
+__version__ = "1.2.0"

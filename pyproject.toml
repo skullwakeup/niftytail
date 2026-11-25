@@ -1,6 +1,6 @@
 [project]
 name = "niftytail"
-version = "0.1.0"
+version = "1.2.0"
 description = "Extreme downside risk estimation in the Nifty 50 using extreme value theory (research code)"
 readme = "README.md"
 license = "MIT"

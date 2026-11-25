@@ -1,9 +1,11 @@
-"""Windows app entrypoint (D67, D69): the dashboard in public demo mode.
+"""Windows app entrypoint (D67, D69, D74): the dashboard in public demo mode.
 
-Run by packaging/NIFTYTAIL.cmd through `uv run`. Sets NIFTYTAIL_PUBLIC=1, changes to the project
-root (the dashboard reads tracked files and .streamlit/config.toml relative to it) and starts
-Streamlit headless on port 8501 (no first-run e-mail question). A background thread opens the
-browser once the health endpoint answers "ok", polling for up to 120 s.
+Run by packaging/NIFTYTAIL.cmd with the bundled Python (`python.exe -I`, D74). Sets
+NIFTYTAIL_PUBLIC=1, changes to the project root (the dashboard reads tracked files and
+.streamlit/config.toml relative to it) and starts Streamlit headless on port 8501 (no first-run
+e-mail question), bound to localhost: no external-IP lookup at start and not reachable from the
+network (D74). A background thread opens the browser once the health endpoint answers "ok",
+polling for up to 120 s.
 """
 
 import os
@@ -45,6 +47,7 @@ def main() -> None:
         "app/dashboard.py",
         "--server.headless=true",
         "--server.port=8501",
+        "--server.address=localhost",
     ]
     sys.exit(cli.main())
 
